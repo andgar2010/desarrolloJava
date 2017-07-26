@@ -31,7 +31,6 @@ public class Ejemplo {
 		int antiguedad;
 		float bonificacion;
 
-		/*
 		//Ingresa datos básicos
 		do {
 			identidad = JOptionPane.showInputDialog("Por favor escriba su número de identidad");
@@ -43,15 +42,14 @@ public class Ejemplo {
 					"Digite su genero, si es másculino escriba M, sino escriba F.")).charAt(0);
 			rep = Integer.parseInt(JOptionPane.showInputDialog("¿Desea continuar? Si marca 1, No marca 2"));
 		} while (rep == 1);
-		 */
 
- /*  
+		/*  
         int paso1 = 1;
         while (paso1 == 1) {
             paso1 = 0;
         }
-		 */
- /*
+		*/
+
 		//Ingresa cantidad horas laborales por cada semana
 		horasTotal = 0;
 		int MAX_HORASLABOR = 40;
@@ -73,36 +71,37 @@ public class Ejemplo {
 		salarioHora = Integer.parseInt(
 				JOptionPane.showInputDialog("Por favor ingresa valor hora")
 		);
-		 */
+
+		//Calcular salario x horas laborado durante mes
+		valorTotal = horasTotal * salarioHora;
+
 		// Ingresa fecha de ingreso para bonficación
 		antiguedad = Integer.parseInt(JOptionPane.showInputDialog("Por favor ingresa cantidad años laborado por antiguedad"));
 
 		if (antiguedad >= 0 && antiguedad <= 3) {
 			JOptionPane.showMessageDialog(null, "Antiguedad es 0 años hasta 3 años");
+			valorTotal= (float) (valorTotal*1.03);
 		} else {
 			if (antiguedad >= 4 && antiguedad <= 5) {
 				JOptionPane.showMessageDialog(null, "Antiguedad es desde 4 años hasta 5 años");
+				valorTotal= (float) (valorTotal*1.05);
 			} else {
 				if (antiguedad >= 5 && antiguedad <= 10) {
 					JOptionPane.showMessageDialog(null, "Antiguedad es desde 5 años hasta menos 10 años");
+					valorTotal= (float) (valorTotal*1.07);
 				} else {
 					JOptionPane.showMessageDialog(null, "Antiguedad es más 10 años");
+					valorTotal= (float) (valorTotal*1.1);
 				}
 			}
 		}
-
-		/*
-		//Calcular salario x horas laborado durante mes
-		valorTotal = horasTotal * salarioHora;
 
 		//Muestra ventana contiene datos básicos y total horas laborales x mes
 		JOptionPane.showMessageDialog(null,
 				"Su identidad es " + identidad + ", Nombre: " + nombre
 				+ "\nedad: " + edad + ", genero: " + genero + ", estataura:" + estatura + "cm"
 				+ "\n" + horasTotal + " Horas Total laborado durante mes"
-				+ "\n $" + valorTotal + " Salario durante mes");
-		//+ "\nSu salario es " + (float) salario
-		 */
+				+ "\n$" + valorTotal + " Salario durante mes");
 	}
 }
 
