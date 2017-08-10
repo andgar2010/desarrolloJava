@@ -52,7 +52,7 @@ public class Ejemplo {
 
 		//Ingresa cantidad horas laborales por cada semana
 		horasTotal = 0;
-		int MAX_HORASLABOR = 40;
+		final int MAX_HORASLABOR = 40;
 		for (int i = 0; i < horasLaboralxSemana.length; i++) {
 			do {
 				horasLaboralxSemana[i] = Integer.parseInt(
@@ -61,10 +61,15 @@ public class Ejemplo {
 				if (horasLaboralxSemana[i] > MAX_HORASLABOR) {
 					JOptionPane.showMessageDialog(null,
 							"No puede ingresa el número\nMáximo 40 horas laborado por " + (i + 1) + "° semana");
-				} else {
+				}
+				else if (horasLaboralxSemana[i] <= 1) {
+					JOptionPane.showMessageDialog(null,
+							"No puede ingresa el número negativo\ndesde 1 horas laborado por " + (i + 1) + "° semana");
+				}
+				else {
 					horasTotal += horasLaboralxSemana[i];
 				}
-			} while (horasLaboralxSemana[i] > MAX_HORASLABOR);
+			} while (horasLaboralxSemana[i] > MAX_HORASLABOR || horasLaboralxSemana[i] <= 1);
 		}	
 
 		//Ingresa valor hora laboral
