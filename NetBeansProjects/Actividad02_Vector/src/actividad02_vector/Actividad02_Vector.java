@@ -20,10 +20,11 @@ public class Actividad02_Vector {
 	 */
 	public static void main(String[] args) {
 		int posVector;
+		String temp = "";
 
 		// Ingresa cantidad posición en vector
 		posVector = Integer.parseInt(
-			JOptionPane.showInputDialog("Por favor ingresa cantidad posición de vector"));
+			JOptionPane.showInputDialog("Por favor ingresa cantidad elemento de vector"));
 		
 		//Crear vector
 		int vector[] = new int[posVector];
@@ -35,15 +36,12 @@ public class Actividad02_Vector {
 				"Ingresa los números por cada un espacio\nDigite el número en posición " + (i+1)
 				)
 			);
+			temp += " | " + vector[i];
 		}//Fin ingresa los números por cada posición en vector
 		
 		// Muestra ventana los números en un vector
 		JOptionPane.showMessageDialog(null,
-			"Guardado los números en vector son");
-		
-		for (int i = 0; i < posVector; i++) {
-			System.out.println("|"+vector[i] + "|");
-			//JOptionPane.showMessageDialog(null, "|"+vector[i] + "|-");
-		}//Fin Muestra ventana los números en un vector
-	}	
+			"Guardado los números en vector son\n" + temp + " |");
+		//Fin Muestra ventana los números en un vector
+	}
 }
