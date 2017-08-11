@@ -27,7 +27,7 @@ public class Actividad02_Vector {
 		
 		int vector[] = new int[posVector];
 		
-		for (int i = 0; i < posVector; i++) {
+		for (int i = 0; i < vector.length; i++) {
 			vector[i] = Integer.parseInt(
 				JOptionPane.showInputDialog(
 				"Ingresa los números por cada un espacio\nDigite el número en posición " + (i+1)
