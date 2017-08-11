@@ -35,24 +35,12 @@ public class Actividad02_Vector {
 			);
 		}
 		
-		System.out.println("Guardado los números en vector son");
+		JOptionPane.showMessageDialog(null,
+			"Guardado los números en vector son");
+		
 		for (int i = 0; i < posVector; i++) {
-			System.out.print("|"+vector[i] + "|-");
-		}
-		
-		
-		/*
-		// Solicitar escriba cantidad de vectores
-		int posVector;
-		posVector = Integer.parseInt(JOptionPane.showInputDialog("Por favor ingresa número cantidad de vector"));
-
-		int[] varVerctor = new int[posVector];
-
-		for (int i = 0; i < posVector-1; i++) {
-			//Inicia ingresa vector
-			varVector[i] = Integer.parseInt(JOptionPane.showInputDialog("Por favor digite el número en " + (i + 1) + "° posición"));
-		}
-		*/
-	}
-	
+			System.out.println("|"+vector[i] + "|");
+			//JOptionPane.showMessageDialog(null, "|"+vector[i] + "|-");
+		}	
+	}	
 }
