@@ -16,8 +16,6 @@ public class Ejemplo {
 	 */
 	@SuppressWarnings("empty-statement")
 	public static void main(String[] args) {
-		// TODO code application logic here
-		String id;
 		String identidad;
 		String nombre;
 		int edad;
@@ -29,7 +27,6 @@ public class Ejemplo {
 		float valorTotal;
 		int horasTotal;
 		int antiguedad;
-		float bonificacion;
 
 		//Ingresa datos básicos
 		do {
@@ -109,6 +106,3 @@ public class Ejemplo {
 				+ "\n$" + valorTotal + " Salario durante mes");
 	}
 }
-
-// Muestra ventana Horas laborales x semanas
-            //JOptionPane.showMessageDialog(null,semana + "° Semana" + horasLaboralxSemana[i] + " Horas Laborales");
