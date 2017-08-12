@@ -6,6 +6,7 @@
 package actividad03_01_multiplostabla;
 
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -13,23 +14,30 @@ import java.util.Scanner;
  */
 public class Actividad03_01_MultiplosTabla {
 
-	/**
-	 * @param args the command line arguments
-	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		int n;
+		
+		
+		n = Integer.parseInt(JOptionPane.showInputDialog(
+			"Por favor ingresa que desea numero multiplos en tabla"));
+		generarTabla(n);
+		
+	}//Fin main
+	
+	
+	
+	public static void generarTabla(int n)
+	{
+		String mensaje;
 		int c = 1;
-		System.out.println("Por favor ingresa que desea numero multiplos en tabla");
 		
-		Scanner ingresa = new Scanner(System.in);
-		
-		n = ingresa.nextInt();
-		
-		System.out.println("Multiplicacion tabla de " + n + " es: ");
+		mensaje="Multiplicacion tabla de " + n + " es: \n";
 		
 		for (; c <= 10; c++) {
-		 System.out.println(n + " X " + c + " = " + (n*c));	
+		mensaje+=n + " X " + c + " = " + (n*c)+"\n";	
 		}
-	}
-	
+		
+		JOptionPane.showMessageDialog(null,mensaje);
+	}//Fin generarTabla	
 }
