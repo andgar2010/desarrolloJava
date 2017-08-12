@@ -5,12 +5,12 @@
  */
 package actividad03_01_multiplostabla;
 
-import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 /**
  *
- * @author andga
+ * @author Andrés Felipe García
+ * Created in 2017-08-26
  */
 public class Actividad03_01_MultiplosTabla {
 
@@ -24,9 +24,7 @@ public class Actividad03_01_MultiplosTabla {
 		generarTabla(n);
 		
 	}//Fin main
-	
-	
-	
+		
 	public static void generarTabla(int n)
 	{
 		String mensaje;
