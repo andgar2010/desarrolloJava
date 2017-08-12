@@ -42,7 +42,6 @@ public class Actividad02_02_Vector {
 		} else {
 			JOptionPane.showMessageDialog(null, "No encontrado número que usted ingresa: "+ campo);
 		}	
-		
  	}//Fin Main
 	
 	public static void llenarVector(int vector[])
@@ -53,7 +52,6 @@ public class Actividad02_02_Vector {
 				JOptionPane.showInputDialog(
 				"Ingresa los números por cada un espacio\nDigite el número en posición " + (i+1)));
 		}
-		
 	}//Fin ingresa los números por cada posición en vector
 	
 	public static int ingresarCampo()
