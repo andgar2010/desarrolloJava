@@ -20,25 +20,24 @@ public class Actividad02_Vector {
 	 */
 	public static void main(String[] args) 
 	{
-		int posVector;		
+		int elemVector;		
 
-		// Ingresa cantidad posición en vector
-		posVector = Integer.parseInt(
+		// Ingresa cantidad elemento en vector
+		elemVector = Integer.parseInt(
 			JOptionPane.showInputDialog("Por favor ingresa cantidad elemento de vector"));
 		
-		//Crear vector
-		int vector[] = new int[posVector];
+		//Crear vector por elemento
+		int vector[] = new int[elemVector];
 		
 		// Ingresa los números por cada posición en vector
-		llenar(vector);
+		llenarVector(vector);
 		 		
 		// Muestra ventana los números en un vector
-		imprimir(vector);
-		
-	}
+		imprimir(vector);		
+	}//Fin Main
 	
 	
-	public static void llenar(int vector[])
+	public static void llenarVector(int vector[])
 	{
 		for (int i = 0; i < vector.length; i++) 
 		{
