@@ -18,30 +18,64 @@ public class Actividad02_02_Vector {
 	 * @param args the command line arguments
 	 */
 	public static void main(String[] args) {
-		//Inicializar vector
-		int vector[] = {0,2,4,6,7,9};
+		
+		int elemVector;	
 		int campo;
 
+		// Ingresa cantidad elemento en vector
+		elemVector = Integer.parseInt(
+			JOptionPane.showInputDialog("Por favor ingresa cantidad elemento de vector"));
+		
+		//Crear vector por elemento
+		int vector[] = new int[elemVector];
+		
+		// Ingresa los números por cada posición en vector
+		llenarVector(vector);
+		
 		// Ingresa número campo para busqueda igual inicializar vector
+		campo=ingresarCampo();
+		
+		// Inicia Busqueda igual numero entre campo y vector y  Muestra ventana mensaje al usuario
+		if (buscarComparativa(vector, campo)) 
+		{
+			JOptionPane.showMessageDialog(null, "El número "+campo+" fue Encontrado");
+		} else {
+			JOptionPane.showMessageDialog(null, "No encontrado número que usted ingresa: "+ campo);
+		}	
+		
+ 	}//Fin Main
+	
+	public static void llenarVector(int vector[])
+	{
+		for (int i = 0; i < vector.length; i++) 
+		{
+			vector[i] = Integer.parseInt(
+				JOptionPane.showInputDialog(
+				"Ingresa los números por cada un espacio\nDigite el número en posición " + (i+1)));
+		}
+		
+	}//Fin ingresa los números por cada posición en vector
+	
+	public static int ingresarCampo()
+	{
+		// Ingresa número campo para busqueda igual inicializar vector
+		int campo;
 		campo = Integer.parseInt(
 					JOptionPane.showInputDialog(
-						"Por favor ingresa número para busqueda en incializar vector 0-9 ")
+						"Por favor ingresa número para busqueda en un vector")
 				);
-		
-		// Inicia Busqueda igual numero entre campo y vector
+		return campo;
+	}//Fin Ingresar un numero campo()
+	
+	public static boolean buscarComparativa(int vector[], int campo){
 		boolean encontrado = false;
-		for (int i = 0; i < vector.length; i++) {
+		for (int i = 0; i < vector.length; i++) 
+		{
 			if (vector[i] == campo)
 			{
 				encontrado = true;
 			}
 		}
-		
-		// Muestra ventana mensaje al usuario 
-		if (encontrado) {
-			JOptionPane.showMessageDialog(null, "Encontrado número");
-		} else {
-			JOptionPane.showMessageDialog(null, "No encontrado número que usted ingresa");
-		}
- 	}
+		return encontrado;
+	}//Fin buscarComparativa()
 }
