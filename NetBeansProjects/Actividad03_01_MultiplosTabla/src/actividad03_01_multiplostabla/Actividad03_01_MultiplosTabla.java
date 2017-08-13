@@ -68,16 +68,14 @@ public class Actividad03_01_MultiplosTabla {
 
 	public static void imprimirFraccionSuma(int n, int denom, int resultadoNumerador)
 	{
-		int num = 0;
 		double resultadoFraccion;
 		String linNumerador = "", linFraccion = "", linDenominador = "";
 
 		resultadoFraccion = (double) (resultadoNumerador / denom);
 
 		//Dibujar linea NUMERADOR a STRING	
-		for (int i = 0; i <= n; i++)
+		for (int num = 0; num <= n; num++)
 		{
-			num = i;
 			linNumerador += num + "      ";
 		}//Fin Dibujar linea NUMERADOR a STRING
 
