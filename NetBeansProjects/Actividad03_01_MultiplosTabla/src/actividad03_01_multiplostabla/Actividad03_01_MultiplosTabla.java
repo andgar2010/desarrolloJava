@@ -24,6 +24,14 @@ public class Actividad03_01_MultiplosTabla {
 						+ "\n1. Ejectuar Tabla de Multiplicar"
 						+ "\n2. Ejectuar la suma de los primeros numeros hasta n números naturales"
 						+ "\n3. Ejectuar la suma de fracciones de los primeros numeros naturales hasta n números naturales"));
+				if (opcion > 3)
+				{
+					JOptionPane.showMessageDialog(null, "Incorrecta numero, por favor elegir numero 1 - 3");
+				}
+				else if (opcion <= 0)
+				{
+					JOptionPane.showMessageDialog(null, "No existe negativo numero para elegir opcion, por favor elegir numero 1 - 3");
+				}
 			} while (opcion > 3 || opcion <= 0);
 
 			switch (opcion) {
@@ -50,12 +58,11 @@ public class Actividad03_01_MultiplosTabla {
 					int resultltadoNumerador = generarSuma1_n(n);
 					imprimirFraccionSuma(n, denom, resultltadoNumerador);
 					break;
-				//Fin Case 3 ()
+				//Fin Case 3 FraccionSuma
 			}//Fin Switch Opcion -> Ejecutar 
 
 			inicio = Integer.parseInt(
 					JOptionPane.showInputDialog("Desea nuevamente ejecutar inicio?\nSi Marcar 1.\nNo, Cualquier tecla"));
-
 		} while (inicio == 1);
 	}//Fin main
 
