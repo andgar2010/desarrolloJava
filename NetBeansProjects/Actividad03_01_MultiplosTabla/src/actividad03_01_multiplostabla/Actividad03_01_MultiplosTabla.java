@@ -49,7 +49,7 @@ public class Actividad03_01_MultiplosTabla {
 			}//Fin Switch Opcion -> Ejecutar 
 			
 			inicio = Integer.parseInt(
-				JOptionPane.showInputDialog("Desea nuevamente ejectuar inicio? Si Marcar 1.\nNo, Cualquier tecla"));
+				JOptionPane.showInputDialog("Desea nuevamente ejecutar inicio?\nSi Marcar 1.\nNo, Cualquier tecla"));
 
 		} while (inicio == 1);
 	}//Fin main
@@ -60,12 +60,7 @@ public class Actividad03_01_MultiplosTabla {
 		
 		for (int c = 0; c <= n; c++) {
 			result = c + result;
-			//System.out.println(result);
-		}
-
-		for (int c = 0; c <= n; c++) {
 			tempN += c + " + ";
-			//System.out.println(tempN);
 		}
 
 		String msg = "La suma hasta numero " + n  + "\nresultado: " + tempN + " = " + result;
