@@ -14,15 +14,15 @@ import javax.swing.JOptionPane;
 public class Actividad03_01_MultiplosTabla {
 
 	public static void main(String[] args) {
-		int n, num, denom, opcion, inicio;
+		int n, denom, opcion, inicio;
 
 		do {
 			do {
 				opcion = Integer.parseInt(JOptionPane.showInputDialog(
 						"Que desea elegir programa:\nMarcar:"
-						+ "\n1. Ejectuar Tabla de Multiplicacion"
-						+ "\n2. Ejectuar la suma de los primeros n números naturales"
-						+ "\n3. Ejectuar la multiplicación de los primeros hasta n números naturales"));
+						+ "\n1. Ejectuar Tabla de Multiplicar"
+						+ "\n2. Ejectuar la suma de los primeros numeros hasta n números naturales"
+						+ "\n3. Ejectuar la suma de fracciones de los primeros numeros naturales hasta n números naturales"));
 			} while (opcion > 3 || opcion <= 0);
 
 			switch (opcion) {
@@ -36,17 +36,18 @@ public class Actividad03_01_MultiplosTabla {
 				case 2:
 					n = Integer.parseInt(JOptionPane.showInputDialog(
 							"Por favor ingresa que desea numero limite para suma de los primeros al limite"));
-					generarSuma1_n(n);
+					
+					int result = generarSuma1_n(n);
+					imprimirResultadoSum1_n(n, result);
 					break;
 				//Fin Case 2 generarSuma1_n()
 
 				case 3:
 					n = Integer.parseInt(JOptionPane.showInputDialog("Por favor ingresar que desea limite numero de serie"));
-//					num = Integer.parseInt(JOptionPane.showInputDialog("Por favor ingresar que desea numero numerador"));
 					denom = Integer.parseInt(JOptionPane.showInputDialog("Por favor ingresar que desea numero denominador"));
 
-					generarSumaFraccion(n, denom);
-					dibujarFraccionSuma(n, denom);
+					int resultltadoNumerador = generarSuma1_n(n);
+					imprimirFraccionSuma(n, denom, resultltadoNumerador);
 					break;
 				//Fin Case 3 ()
 			}//Fin Switch Opcion -> Ejecutar 
@@ -57,12 +58,20 @@ public class Actividad03_01_MultiplosTabla {
 		} while (inicio == 1);
 	}//Fin main
 
-	public static void generarSumaFraccion(int n, int denom) {
-		int num = 0;
+	public static int generarSumaFraccion(int n, int denom) {
+		int resultNumerador = 0;
 		
+
+		for (int c = 0; c <= n; c++) {
+			resultNumerador += c;
+		}
+		
+		System.out.println(resultNumerador);
+		
+		return resultNumerador;
 	}//Fin generarSumaFraccion()
 	
-	public static void dibujarFraccionSuma(int n, int denom){
+	public static void imprimirFraccionSuma(int n, int denom, int resultadoNumerador){
 		int num = 0;
 		
 		System.out.println("Numero de serie es " + n);
@@ -75,7 +84,7 @@ public class Actividad03_01_MultiplosTabla {
 			System.out.print(num + "\t");
 		}
 			//Dibujar linea resultado NUMERADOR
-			System.out.print("  20");
+			System.out.print("  " + resultadoNumerador);
 			//Fin Dibujar linea resultado NUMERADOR
 		//Fin Dibujar linea NUMERADOR		
 
@@ -97,24 +106,32 @@ public class Actividad03_01_MultiplosTabla {
 			System.out.print(denom + "\t");
 		}
 			//Dibujar linea resultado DENOMINADOR
-			System.out.print("   5");
+			System.out.println("   " + denom);
 			//Fin Dibujar linea resultado DENOMINADOR
 		//Fin Dibujar linea DENOMINADOR
 		
 	}//Fin dibujarFraccionSuma()
 
-	public static void generarSuma1_n(int n) {
-		int result = 0;
+	public static void imprimirResultadoSum1_n(int n, int result){
 		String tempN = "";
-
-		for (int c = 0; c <= n; c++) {
-			result = c + result;
-			tempN += c + " + ";
+		
+		for (int i = 0; i <= n; i++) {
+			tempN += i + " + ";
 		}
-
+		
 		String msg = "La suma hasta numero " + n + "\nresultado: " + tempN + " = " + result;
 
 		JOptionPane.showMessageDialog(null, msg);
+	}//Fin imprimirResultadoSum1_n
+	
+	public static int generarSuma1_n(int n) {
+		int result = 0;
+
+		for (int c = 0; c <= n; c++) {
+			result += c;
+		}
+		
+		return result;
 	}//Fin genrarSuma1_n()
 
 	public static void generarTabla(int n) {
