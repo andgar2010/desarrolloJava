@@ -58,19 +58,6 @@ public class Actividad03_01_MultiplosTabla {
 		} while (inicio == 1);
 	}//Fin main
 
-	public static int generarSumaFraccion(int n, int denom) {
-		int resultNumerador = 0;
-		
-
-		for (int c = 0; c <= n; c++) {
-			resultNumerador += c;
-		}
-		
-		System.out.println(resultNumerador);
-		
-		return resultNumerador;
-	}//Fin generarSumaFraccion()
-	
 	public static void imprimirFraccionSuma(int n, int denom, int resultadoNumerador){
 		int num = 0;
 		
