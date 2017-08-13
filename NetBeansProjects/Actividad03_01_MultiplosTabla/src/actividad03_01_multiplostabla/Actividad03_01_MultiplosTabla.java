@@ -9,7 +9,8 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Andrés Felipe García * Created in 2017-08-26
+ * @author Andrés Felipe García 
+ * Created in 2017-08-26
  */
 public class Actividad03_01_MultiplosTabla {
 
@@ -36,7 +37,7 @@ public class Actividad03_01_MultiplosTabla {
 				case 2:
 					n = Integer.parseInt(JOptionPane.showInputDialog(
 							"Por favor ingresa que desea numero limite para suma de los primeros al limite"));
-					
+
 					int result = generarSuma1_n(n);
 					imprimirResultadoSum1_n(n, result);
 					break;
@@ -58,70 +59,74 @@ public class Actividad03_01_MultiplosTabla {
 		} while (inicio == 1);
 	}//Fin main
 
-	public static void imprimirFraccionSuma(int n, int denom, int resultadoNumerador){
+	public static void imprimirFraccionSuma(int n, int denom, int resultadoNumerador)
+	{
 		int num = 0;
-		
-		System.out.println("Numero de serie es " + n);
-		System.out.println("Denominador es " + denom + "\n");
-				
-		//Dibujar linea NUMERADOR		
-		System.out.print("numerador es\t");
-		for (int i = 0; i <= n; i++) {
+		double resultadoFraccion;
+		String linNumerador = "", linFraccion = "", linDenominador = "";
+
+		resultadoFraccion = (double) (resultadoNumerador / denom);
+
+		//Dibujar linea NUMERADOR a STRING	
+		for (int i = 0; i <= n; i++)
+		{
 			num = i;
-			System.out.print(num + "\t");
-		}
-			//Dibujar linea resultado NUMERADOR
-			System.out.print("  " + resultadoNumerador);
-			//Fin Dibujar linea resultado NUMERADOR
-		//Fin Dibujar linea NUMERADOR		
+			linNumerador += num + "      ";
+		}//Fin Dibujar linea NUMERADOR a STRING
 
-		//Dibujar linea Fraccion
-		System.out.println("");
-		System.out.print("\t");
+		//Dibujar linea Fraccion a STRING
+		for (int i = 0; i <= n; i++)
+		{
+			linFraccion += "--- + ";
+		}//Fin Dibujar linea Fraccion a STRING
 
-		for (int i = 0; i <= n; i++) {
-			System.out.print("\t--  +");
-		}
-			//Dibujar linea resultado 
-			System.out.print("\t= ---");
-			//Fin Dibujar linea resultado 
-		//Fin Dibujar linea Fraccion
+		//Dibujar linea DENOMINADOR a STRING
+		for (int i = 0; i <= n; i++)
+		{
+			linDenominador += denom + "      ";
+		}//Fin Dibujar linea DENOMINADOR
 
-		//Dibujar linea DENOMINADOR
-		System.out.print("\ndenominador es\t");
-		for (int i = 0; i <= n; i++) {
-			System.out.print(denom + "\t");
-		}
-			//Dibujar linea resultado DENOMINADOR
-			System.out.println("   " + denom);
-			//Fin Dibujar linea resultado DENOMINADOR
-		//Fin Dibujar linea DENOMINADOR
-		
+		JOptionPane.showMessageDialog(null,
+			"Numero de serie es " + n
+			+ "\nDenominador es " + denom + "\n"
+			+ //Dibujar linea NUMERADOR		
+			"\n" + linNumerador + "   " + resultadoNumerador
+			+ //Dibujar linea Fraccion
+			"\n" + linFraccion + "= ---"
+			+ //Dibujar linea DENOMINADOR
+			"\n" + linDenominador + "    " + denom
+			+ //Linea Resultado
+			"\n\nResultado es " + resultadoFraccion);
 	}//Fin dibujarFraccionSuma()
 
-	public static void imprimirResultadoSum1_n(int n, int result){
+	public static void imprimirResultadoSum1_n(int n, int result)
+	{
 		String tempN = "";
-		
-		for (int i = 0; i <= n; i++) {
+
+		for (int i = 0; i <= n; i++)
+		{
 			tempN += i + " + ";
 		}
-		
+
 		String msg = "La suma hasta numero " + n + "\nresultado: " + tempN + " = " + result;
 
 		JOptionPane.showMessageDialog(null, msg);
 	}//Fin imprimirResultadoSum1_n
-	
-	public static int generarSuma1_n(int n) {
+
+	public static int generarSuma1_n(int n)
+	{
 		int result = 0;
 
-		for (int c = 0; c <= n; c++) {
+		for (int c = 0; c <= n; c++)
+		{
 			result += c;
 		}
-		
+
 		return result;
 	}//Fin genrarSuma1_n()
 
-	public static void generarTabla(int n) {
+	public static void generarTabla(int n)
+	{
 		String mensaje = "Multiplicacion tabla de " + n + " es: \n";
 		int c = 1;
 
