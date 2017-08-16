@@ -7,6 +7,7 @@ package actividad06;
 
 import javax.swing.JOptionPane;
 import java.lang.Math;
+import java.util.ArrayList;
 
 /**
  *
@@ -32,7 +33,8 @@ public class Actividad06 {
 				if (opcion > 3) {
 					JOptionPane.showMessageDialog(null, "Incorrecta numero, por favor elegir numero 1 - 3");
 				} else if (opcion <= 0) {
-					JOptionPane.showMessageDialog(null, "No existe negativo numero para elegir opcion, por favor elegir numero 1 - 3");
+					JOptionPane.showMessageDialog(null, 
+						"No existe negativo numero para elegir opcion, por favor elegir numero 1 - 3");
 				}
 			} while (opcion > 3 || opcion <= 0);
 
@@ -47,8 +49,9 @@ public class Actividad06 {
 				//Fin Case 2 calcularFormula()
 
 				case 2:
-					JOptionPane.showMessageDialog(null,
-							"Disculpas por molestas. Estamos construcción");
+					n =  Integer.parseInt(JOptionPane.showInputDialog(
+							"Por favor ingresa un numero"));
+					contadorTecla(n);
 					break;
 				//Fin Case 2
 
@@ -66,6 +69,36 @@ public class Actividad06 {
 		} while (rep == 1);
 
 	}//Fin Main
+	
+	private static void contadorTecla(int n)
+	{
+		int pos = 0, bandera = 0;
+		ArrayList<Integer> temp = new ArrayList<>();
+		
+		temp.add(pos, n);
+		
+		if (n == 0)
+		{
+			JOptionPane.showMessageDialog(null, "Usuario, usted digitó " + temp.size() + " números");
+		}
+		else 
+		{
+			do
+			{
+				pos++;
+				temp.add(pos, Integer.parseInt(JOptionPane.showInputDialog("Intento otro numero")));
+
+				if (temp.contains(0))
+				{
+					bandera = 1;
+				}
+				
+			} while (bandera != 1);
+			
+			JOptionPane.showMessageDialog(null, "Usuario, usted digitó " + temp.size() + " números");
+		}		
+	}//Fin contadorTecla()
+	
 
 	public static void imprimirResultado(int n, int result) {
 
