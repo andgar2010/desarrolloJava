@@ -9,7 +9,8 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Andres Felipe Garcia Ramirez Created in 2017-08-04
+ * @author Andres Felipe Garcia Ramirez
+ * Created in 2017-08-04
  */
 public class Actividad05 {
 

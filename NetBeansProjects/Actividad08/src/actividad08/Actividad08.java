@@ -9,7 +9,8 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author andga
+ * @author Andres Felipe Garcia Ramirez
+ * Created in 2017-08-16
  */
 public class Actividad08 {
 
@@ -18,10 +19,10 @@ public class Actividad08 {
 	 */
 	public static void main(String[] args) {
 
-		int inicio = 0, marca;
+		int inicio = 0;
 		char inputUserChar;
 		int resultChar;
-		String msg = "", inputUserWord, invertidaPalabra;
+		String msg = "", inputUserWord, resultInvertWord;
 
 		JOptionPane.showMessageDialog(null, "Bienvenido Actividad #8\nPor Andrés García Ficha 1320652-2");
 
@@ -31,44 +32,44 @@ public class Actividad08 {
 					JOptionPane.showInputDialog("Selecciona ejercicio:\n1. Invertir palabra\n2. Letras o números"));
 
 			switch (menu) {
+			case 1:
+				resultInvertWord = invertirPalabra(
+						inputUserWord = JOptionPane.showInputDialog("Por favor ingresa una palabra"));
+				JOptionPane.showMessageDialog(null, "Palabra " + inputUserWord + " ----->  " + resultInvertWord);
+				break;//Fin CASE 1 InvertirPalabra
+
+			case 2:
+				resultChar = verificarTipoCaracter(
+						inputUserChar = (JOptionPane.showInputDialog("Por favor digita cualquier tecla")).charAt(0));
+
+				switch (resultChar) {
 				case 1:
-					invertidaPalabra = invertirPalabra(inputUserWord = JOptionPane.showInputDialog("Por favor ingresa una palabra"));
-					JOptionPane.showMessageDialog(null, "Palabra " + inputUserWord + " ----->  " + invertidaPalabra);
-					break;//Fin CASE 1 InvertirPalabra
-				
+					msg = " es Numero";
+					break;
 				case 2:
-					resultChar = verificarTipoCaracter(
-							inputUserChar = (JOptionPane.showInputDialog(
-									"Por favor digita cualquier tecla")).charAt(0));
+					msg = " es Simbolo";
+					break;
+				case 3:
+					msg = " es Letra";
+					break;
+				}
 
-					switch (resultChar) {
-						case 1:
-							msg = " es Numero";
-							break;
-						case 2:
-							msg = " es Simbolo";
-							break;
-						case 3:
-							msg = " es Letra";
-							break;
-					}
+				JOptionPane.showMessageDialog(null, inputUserChar + msg);
 
-					JOptionPane.showMessageDialog(null, inputUserChar + msg);
-
-					break;//Fin CASE 2 verificarTipoCaracter
+				break;//Fin CASE 2 verificarTipoCaracter
 			}
 
 			inicio = Integer.parseInt(
-					JOptionPane.showInputDialog(
-							"Que desea repetir desde menu?\nSelecciona\n1. Si\n2. No"));
+				JOptionPane.showInputDialog("Que desea repetir desde menu?\nSelecciona\n1. Si\n2. No"));
 
 		} while (inicio == 1);
 	}//Fin Main
 
 	public static int verificarTipoCaracter(char inputUserChar) {
 
-		char[] numero = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
-		char[] simbolo = {'.', ',', '[', ']', '\\', '=', '-', '`', '/', '-', '*', '+', '<', '>', '?', '"', '}', '{', '|', '_', ')', '(', '*', '&', '&', '^', '%', '$', '#', '@', '!', '~', '¬'};
+		char[] numero = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+		char[] simbolo = { '.', ',', '[', ']', '\\', '=', '-', '`', '/', '-', '*', '+', '<', '>', '?', '"', '}', '{',
+				'|', '_', ')', '(', '*', '&', '&', '^', '%', '$', '#', '@', '!', '~', '¬' };
 		int result = 0;
 
 		for (int i = 0; i < numero.length; i++) {
@@ -76,7 +77,7 @@ public class Actividad08 {
 				result = 1;//Es Numero
 				break;
 			}
-			
+
 			for (int j = 0; j < simbolo.length; j++) {
 				if (simbolo[j] == inputUserChar) {
 					result = 2;//Es Simbolo
@@ -91,18 +92,17 @@ public class Actividad08 {
 	}//Fin verificarTipoCaracter()
 
 	public static String invertirPalabra(String inputUserWord) {
-		
+
 		int countChar;
-		String invertidaPalabra = "";
-		
+		String resultInvertWord = "";
+
 		countChar = inputUserWord.length();
-		
-		for (int i = (countChar-1); i >=0; i--) 
-		{			
-			invertidaPalabra+= inputUserWord.charAt(i);	
+
+		for (int i = (countChar - 1); i >= 0; i--) {
+			resultInvertWord += inputUserWord.charAt(i);
 		}
-		
-		return invertidaPalabra;
-		
+
+		return resultInvertWord;
+
 	}// Fin invertirPalabra()
 }

@@ -94,7 +94,9 @@ public class Actividad04 {
 			}
 		}
 
-		JOptionPane.showMessageDialog(null, "Usted ingresa el numero es " + n + ".\nPosible divisor es:\n" + siPosible + " |");
+		JOptionPane.showMessageDialog(null, 
+			"Usted ingresa el numero es " + n + 
+			".\nPosible divisor es:\n" + siPosible + " |");
 
 	}//Fin divisores()
 

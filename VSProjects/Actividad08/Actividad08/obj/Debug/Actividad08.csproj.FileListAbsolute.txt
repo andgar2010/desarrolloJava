@@ -1,0 +1,6 @@
+G:\ADSI\PORTAFOLIO APRENDIZ GARCIA RAMÍREZ ANDRÉS FELIPE\07. Evidencias de Aprendizaje\CEET\FASE 3\Instructora Sandra Peñaranda\VSProjects\Actividad08\Actividad08\bin\Debug\Actividad08.exe.config
+G:\ADSI\PORTAFOLIO APRENDIZ GARCIA RAMÍREZ ANDRÉS FELIPE\07. Evidencias de Aprendizaje\CEET\FASE 3\Instructora Sandra Peñaranda\VSProjects\Actividad08\Actividad08\bin\Debug\Actividad08.exe
+G:\ADSI\PORTAFOLIO APRENDIZ GARCIA RAMÍREZ ANDRÉS FELIPE\07. Evidencias de Aprendizaje\CEET\FASE 3\Instructora Sandra Peñaranda\VSProjects\Actividad08\Actividad08\bin\Debug\Actividad08.pdb
+G:\ADSI\PORTAFOLIO APRENDIZ GARCIA RAMÍREZ ANDRÉS FELIPE\07. Evidencias de Aprendizaje\CEET\FASE 3\Instructora Sandra Peñaranda\VSProjects\Actividad08\Actividad08\obj\Debug\Actividad08.csprojResolveAssemblyReference.cache
+G:\ADSI\PORTAFOLIO APRENDIZ GARCIA RAMÍREZ ANDRÉS FELIPE\07. Evidencias de Aprendizaje\CEET\FASE 3\Instructora Sandra Peñaranda\VSProjects\Actividad08\Actividad08\obj\Debug\Actividad08.exe
+G:\ADSI\PORTAFOLIO APRENDIZ GARCIA RAMÍREZ ANDRÉS FELIPE\07. Evidencias de Aprendizaje\CEET\FASE 3\Instructora Sandra Peñaranda\VSProjects\Actividad08\Actividad08\obj\Debug\Actividad08.pdb
