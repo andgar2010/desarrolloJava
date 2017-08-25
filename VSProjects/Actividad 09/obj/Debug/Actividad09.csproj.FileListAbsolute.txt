@@ -1,0 +1,6 @@
+G:\ADSI\PORTAFOLIO APRENDIZ GARCIA RAMÍREZ ANDRÉS FELIPE\07. Evidencias de Aprendizaje\CEET\FASE 3\Componente JAVA\VSProjects\Actividad 09\obj\Debug\Actividad09.csprojResolveAssemblyReference.cache
+G:\ADSI\PORTAFOLIO APRENDIZ GARCIA RAMÍREZ ANDRÉS FELIPE\07. Evidencias de Aprendizaje\CEET\FASE 3\Componente JAVA\VSProjects\Actividad 09\bin\Debug\Actividad 09.exe.config
+G:\ADSI\PORTAFOLIO APRENDIZ GARCIA RAMÍREZ ANDRÉS FELIPE\07. Evidencias de Aprendizaje\CEET\FASE 3\Componente JAVA\VSProjects\Actividad 09\bin\Debug\Actividad 09.exe
+G:\ADSI\PORTAFOLIO APRENDIZ GARCIA RAMÍREZ ANDRÉS FELIPE\07. Evidencias de Aprendizaje\CEET\FASE 3\Componente JAVA\VSProjects\Actividad 09\bin\Debug\Actividad 09.pdb
+G:\ADSI\PORTAFOLIO APRENDIZ GARCIA RAMÍREZ ANDRÉS FELIPE\07. Evidencias de Aprendizaje\CEET\FASE 3\Componente JAVA\VSProjects\Actividad 09\obj\Debug\Actividad 09.exe
+G:\ADSI\PORTAFOLIO APRENDIZ GARCIA RAMÍREZ ANDRÉS FELIPE\07. Evidencias de Aprendizaje\CEET\FASE 3\Componente JAVA\VSProjects\Actividad 09\obj\Debug\Actividad 09.pdb
