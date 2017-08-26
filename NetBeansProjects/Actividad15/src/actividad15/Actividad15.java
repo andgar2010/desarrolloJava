@@ -4,19 +4,17 @@ import javax.swing.JOptionPane;
 
 /**
  * <h2>Componente JAVA Actividad N°15 Comprobar fecha</h2>
- * <p> 
+ * <p>
  * <b>Andrés Felipe García Ramirez</b>
  * <a href="mailto:afgarcia0479@misena.edu.co">&lt;afgarcia0479@misena.edu.co&gt;</a>
- * <br><i>Estudiante Tecnología en Análisis y Desarrollo de Sistemas de Información (ADSI) 
- * - Ficha 1320652-2</i> 
+ * <br><i>Estudiante Tecnología en Análisis y Desarrollo de Sistemas de Información (ADSI) - Ficha 1320652-2</i>
  * <p>
  * COMPONENTE JAVA (FASE III) - Instructora Sandra Peñaranda
- * <br>CENTRO ELECTRICIDAD, ELECTRÓNICA Y TELECOMUNICACIONES (CEET) - 
- * SENA REGIONAL DISTRITO CAPITAL, COLOMBIA.
+ * <br>CENTRO ELECTRICIDAD, ELECTRÓNICA Y TELECOMUNICACIONES (CEET) - SENA REGIONAL DISTRITO CAPITAL, COLOMBIA.
  * <p>
- * <br><b>Descripción:</b> 
+ * <br><b>Descripción:</b>
  * Actividad N°15 Comprobar fecha
- * 
+ *
  * @author Andrés Felipe García Ramirez <a href="mailto:afgarcia0479@misena.edu.co">&lt;afgarcia0479@misena.edu.co&gt;</a>
  * <br>Estudiante Tecnología en Análisis y Desarrollo de Sistemas de Información (ADSI).
  * @version 0.1 2017-08-24
@@ -28,53 +26,138 @@ public class Actividad15
 
 	public static void main(String[] args)
 	{
-		int inicio, dia, mes, anio;
+		int inicio, dia, mes, anio, inicioAnio, finAnio, opcionMenu;
 		String nomMes = "";
-		boolean validaDiaMes, diasBisieto;
+		boolean validaDiaMes, diasBisieto, siAnioBisiesto;
 
 		JOptionPane.showMessageDialog(null, "Bienvienido Actividad #15\nBy Andrés García");
 
 		do {
-			do {
-				dia = Integer.parseInt(
-						JOptionPane.showInputDialog("Ingresa día:"));
-				if (dia < 0) {
-					JOptionPane.showMessageDialog(null, "Incorrecta\nNo existe día negativo de fecha");
-				}
-			}
-			while (dia < 0);
+			opcionMenu = Integer.parseInt(JOptionPane.showInputDialog("Elegir opcion:\n1. Ejercicio 1\n2. Ejercicio 2\n3. Ejercicio"));
 
-			do {
-				mes = Integer.parseInt(
-						JOptionPane.showInputDialog("Ingresa numero de mes:"));
-				if (mes < 0) {
-					JOptionPane.showMessageDialog(null, "Incorrecta\nNo existe mes negativo");
-				}
-			}
-			while (mes < 0);
+			switch (opcionMenu) {
+				case 1:
+					do {
+						dia = Integer.parseInt(
+								JOptionPane.showInputDialog("Ingresa día:"));
+						if (dia < 0) {
+							JOptionPane.showMessageDialog(null, "Incorrecta\nNo existe día negativo de fecha");
+						}
+					}
+					while (dia < 0);
 
-			do {
-				anio = Integer.parseInt(
-						JOptionPane.showInputDialog("Ingresa año"));
-				if (anio < 1200 || anio > 2200) {
-					JOptionPane.showMessageDialog(null, "Lo siento, no puede ingresa, porque usted fuera de rango año");
-				}
-			}
-			while (anio < 1200 || anio > 2200);
+					do {
+						mes = Integer.parseInt(
+								JOptionPane.showInputDialog("Ingresa numero de mes:"));
+						if (mes < 0) {
+							JOptionPane.showMessageDialog(null, "Incorrecta\nNo existe mes negativo");
+						}
+					}
+					while (mes < 0);
 
-			diasBisieto = verficiarBisiesto(anio);
+					do {
+						anio = Integer.parseInt(
+								JOptionPane.showInputDialog("Ingresa año"));
+						if (anio < 1200 || anio > 2200) {
+							JOptionPane.showMessageDialog(null, "Lo siento, no puede ingresa, porque usted fuera de rango año");
+						}
+					}
+					while (anio < 1200 || anio > 2200);
 
-			nomMes = convertirNumMes_NombreMes(mes);
+					diasBisieto = verficiarBisiesto(anio);
 
-			validaDiaMes = verificarFechaCorrecta(dia, mes, anio, diasBisieto, nomMes);
+					nomMes = convertirNumMes_NombreMes(mes);
 
-			if (validaDiaMes == true) {
-				JOptionPane.showMessageDialog(null, dia + " " + nomMes + " de " + anio + "----> Correcta");
-			}
-			else {
-				JOptionPane.showMessageDialog(null, "Usted ingresa " + dia + " " + nomMes + " de " + anio + " \nEs fecha incorrecta");
-			}
+					validaDiaMes = verificarFechaCorrecta(dia, mes, anio, diasBisieto);
 
+					if (validaDiaMes == true) {
+						JOptionPane.showMessageDialog(null, dia + " " + nomMes + " de " + anio + "----> Correcta");
+					}
+					else {
+						JOptionPane.showMessageDialog(null, "Usted ingresa " + dia + " " + nomMes + " de " + anio + " \nEs fecha incorrecta");
+					}
+					break; //Fin Case 1 Ejercicio
+
+				case 2:
+
+					String msgAnio = "";
+
+					do {
+						inicioAnio = Integer.parseInt(
+								JOptionPane.showInputDialog("Ingresa inicio año"));
+						if (inicioAnio < 1200 || inicioAnio > 2200) {
+							JOptionPane.showMessageDialog(null, "Lo siento, no puede ingresa, porque usted fuera de rango año");
+						}
+					}
+					while (inicioAnio < 1200 || inicioAnio > 2200);
+
+					do {
+						finAnio = Integer.parseInt(
+								JOptionPane.showInputDialog("Ingresa fin año"));
+						if (finAnio < inicioAnio || finAnio > 2200) {
+							JOptionPane.showMessageDialog(null, "Lo siento, no puede ingresa, porque usted fuera de rango año");
+						}
+					}
+					while (finAnio < inicioAnio || finAnio > 2200);
+
+					int count = 0;
+
+					for (int i = inicioAnio; i <= finAnio; i++) {
+
+						siAnioBisiesto = verficiarBisiesto(i);
+
+						if (siAnioBisiesto) {
+							msgAnio += (i + " | ");
+							count++;
+						}
+
+						if (count == 30) {
+							JOptionPane.showMessageDialog(null, "Año Inicio " + inicioAnio
+																+ "\nFin año " + finAnio + "\n Si tiene año bisiesto: \n"
+																+ msgAnio);
+							count = 0;
+							msgAnio = "";
+						}
+					}
+
+					break;//Fin Case 2 Ejercicio
+
+				case 3:
+					int totalDMA = 0;
+
+					do {
+						dia = Integer.parseInt(
+								JOptionPane.showInputDialog("Ingresa día:"));
+						if (dia < 0) {
+							JOptionPane.showMessageDialog(null, "Incorrecta\nNo existe día negativo de fecha");
+						}
+					}
+					while (dia < 0);
+
+					do {
+						mes = Integer.parseInt(
+								JOptionPane.showInputDialog("Ingresa numero de mes:"));
+						if (mes < 0) {
+							JOptionPane.showMessageDialog(null, "Incorrecta\nNo existe mes negativo");
+						}
+					}
+					while (mes < 0);
+
+					do {
+						anio = Integer.parseInt(
+								JOptionPane.showInputDialog("Ingresa año"));
+						if (anio < 1200 || anio > 2200) {
+							JOptionPane.showMessageDialog(null, "Lo siento, no puede ingresa, porque usted fuera de rango año");
+						}
+					}
+					while (anio < 1200 || anio > 2200);
+
+					totalDMA = dia + mes + anio;
+					// 1967
+
+					break;//Fin Case 3 Ejercicio
+
+			}//Fin Switch OpcionMenu
 			inicio = Integer.parseInt(
 					JOptionPane.showInputDialog(
 							"Que desea repetir desde menu?\nSelecciona"
@@ -143,18 +226,18 @@ public class Actividad15
 		return diasBisieto;
 	}
 
-	public static boolean verificarFechaCorrecta(int dia, int mes, int anio, boolean diasBisieto, String nomMes)
+	public static boolean verificarFechaCorrecta(int dia, int mes, int anio, boolean diasBisieto)
 	{
 		boolean validaDiaMes = false;
 		int numDiasBisieto;
-		
+
 		if (diasBisieto == true) {
 			numDiasBisieto = 29;
 		}
 		else {
 			numDiasBisieto = 28;
 		}
-		
+
 		if (mes == 4 || mes == 6 || mes == 9 || mes == 11) {
 			if (30 >= dia)//4,6,9,11 meses son 30 Dias
 			{
@@ -181,7 +264,7 @@ public class Actividad15
 		else {
 			validaDiaMes = false;
 		}
-		
+
 		return validaDiaMes;
 
 	}//Fin verificarFechaCorrecta()
