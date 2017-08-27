@@ -19,12 +19,10 @@ public class Actividad12
 	 */
 	public static void main(String[] args)
 	{
-		int numInput;
-		int digitos;
-		int resultPowMax;
-		String numInputText;
-		String resultPotText;
-		boolean automorfico;
+		int numInput, digitos, resultPowMax, ultDig1_resultPot, ultDig2_resultPot, ultimos2Dig, cantDigResultPot;
+		String numInputText, resultPotText, sResultPot, ultimos2DigitosResPot = "";
+		boolean igualDigito, automorfico;
+		long resultPot;
 
 		numInput = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero:"));
 		//System.out.println("User input: " + numInput);
@@ -37,13 +35,8 @@ public class Actividad12
 		//System.out.println("Resultado potencia int Cambia tipo de datos a String: " + resultPotText);
 		digitos = numInputText.length();
 		//System.out.println("Cantidad digitos \"length\" de Input User: " + digitos);
-
-//		//CalcularPotencia()
-		long resultPot;
-		int ultDig1_resultPot, ultDig2_resultPot = 0, cantDigResultPot;
-		String sResultPot, ultimos2DigitosResPot = "";
-		boolean igualDigito;
-
+		
+		//CalcularPotencia()
 		System.out.println("Base | Exponente | Resultado ");
 		for (int i = 1; i <= numInput; i++) {
 			resultPot = (long) Math.pow(numInput, i);
@@ -78,7 +71,7 @@ public class Actividad12
 				//System.out.println("ultDig1_resultPot y ultDig2_resultPot: "+ ultimos2DigitosResPot);
 
 				//String a int ultimos2Dig
-				int ultimos2Dig = Integer.parseInt(ultimos2DigitosResPot);
+				ultimos2Dig = Integer.parseInt(ultimos2DigitosResPot);
 
 				//Comparativa inputUserNum == Ultima digito de resultado potencia
 				//igualDigito = numInput == ultimos2Dig;
