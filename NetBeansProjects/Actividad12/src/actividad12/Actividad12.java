@@ -19,18 +19,16 @@ public class Actividad12
 	 */
 	public static void main(String[] args)
 	{
-		int numInput, digitos, resultPowMax, ultDig1_resultPot, ultDig2_resultPot, ultimos2Dig, cantDigResultPot;
-		String numInputText, resultPotText, sResultPot, ultimos2DigitosResPot = "";
-		boolean igualDigito, automorfico;
+		int numInput, digitos, ultDig1_resultPot, ultDig2_resultPot, ultimos2Dig, cantDigResultPot;
+		String numInputText, sResultPot, ultimos2DigitosResPot = "";
 		long resultPot;
 
+		//Ingresa Usuario
 		numInput = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero:"));
-		resultPowMax = (int) Math.pow(numInput, numInput);
 		numInputText = String.valueOf(numInput);
-		resultPotText = String.valueOf(resultPowMax);
 		digitos = numInputText.length();
 		
-		//CalcularPotencia()
+		//CalcularPotencia
 		System.out.println("Base | Exponente | Resultado ");
 		for (int i = 1; i <= numInput; i++) {
 			resultPot = (long) Math.pow(numInput, i);
@@ -45,7 +43,7 @@ public class Actividad12
 				ultDig1_resultPot = Character.getNumericValue(sResultPot.charAt(cantDigResultPot - 1));
 
 				//Comparativa inputUserNum == Ultima digito de resultado potencia
-				System.out.println((igualDigito = numInput == ultDig1_resultPot) ? ("Es automórfico") : ("No es automórfico"));
+				System.out.println((numInput == ultDig1_resultPot) ? ("Es automórfico") : ("No es automórfico"));
 			}
 			else //digitos == 2
 			{
@@ -65,14 +63,16 @@ public class Actividad12
 				ultimos2Dig = Integer.parseInt(ultimos2DigitosResPot);
 
 				//Comparativa inputUserNum == Ultima digito de resultado potencia
-				System.out.println((igualDigito = numInput == ultimos2Dig) ? ("Es automórfico") : ("No es automórfico"));
+				System.out.println((numInput == ultimos2Dig) ? ("Es automórfico") : ("No es automórfico"));
 			}
 
 			if (sResultPot.length() >= 19) {
 				System.out.println("\nLo siento, no puede mostrar más " + i + " de exponente. Digitos esta fuera de limite");
 				break;
 			}
-		}
-	}
-
-}
+			
+		}//Fin CalcularPotencia - verificiarAutomorfico
+		
+	}//Fin Main
+	
+}//Fin Class
