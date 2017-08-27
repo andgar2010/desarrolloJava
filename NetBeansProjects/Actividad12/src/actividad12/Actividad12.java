@@ -6,6 +6,7 @@
 package actividad12;
 
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
 
 /**
  *
@@ -19,21 +20,33 @@ public class Actividad12
 	 */
 	public static void main(String[] args)
 	{
+		try {
+          UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+//			UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsClassicLookAndFeel");
+//			UIManager.setLookAndFeel("com.alee.laf.WebLookAndFeel");
+//			UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
+		}
+		catch (Exception e) {
+			System.out.println(e);
+		}
+
 		int numInput, digitos, ultDig1_resultPot, ultDig2_resultPot, ultimos2Dig, cantDigResultPot;
-		String numInputText, sResultPot, ultimos2DigitosResPot = "";
+		String numInputText, sResultPot, ultimos2DigitosResPot = "", msg = "";
 		long resultPot;
 
 		//Ingresa Usuario
 		numInput = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero:"));
 		numInputText = String.valueOf(numInput);
 		digitos = numInputText.length();
-		
+
 		//CalcularPotencia
-		System.out.println("Base | Exponente | Resultado ");
+//		System.out.println("Base | Exponente | Resultado ");
+		msg += "Base | Exponente | Resultado";
 		for (int i = 1; i <= numInput; i++) {
 			resultPot = (long) Math.pow(numInput, i);
 			sResultPot = String.valueOf(resultPot);
-			System.out.print(numInput + "    | " + i + "\t | " + resultPot + " |");
+//			System.out.print(numInput + "    | " + i + "\t | " + resultPot + " |");
+			msg += "\n" + numInput + "    | " + i + "\t    | " + resultPot + " | ";
 
 			if (digitos == 1) {
 				//Cantidad digitos de Resultado Potencia
@@ -43,7 +56,9 @@ public class Actividad12
 				ultDig1_resultPot = Character.getNumericValue(sResultPot.charAt(cantDigResultPot - 1));
 
 				//Comparativa inputUserNum == Ultima digito de resultado potencia
-				System.out.println((numInput == ultDig1_resultPot) ? ("Es automórfico") : ("No es automórfico"));
+//				System.out.println((numInput == ultDig1_resultPot) ? ("Es automórfico") : ("No es automórfico"));
+				msg += (numInput == ultDig1_resultPot) ? (" Es automórfico") : (" No es automórfico");
+
 			}
 			else //digitos == 2
 			{
@@ -63,16 +78,19 @@ public class Actividad12
 				ultimos2Dig = Integer.parseInt(ultimos2DigitosResPot);
 
 				//Comparativa inputUserNum == Ultima digito de resultado potencia
-				System.out.println((numInput == ultimos2Dig) ? ("Es automórfico") : ("No es automórfico"));
+//				System.out.println((numInput == ultimos2Dig) ? ("Es automórfico") : ("No es automórfico"));
+				msg += (numInput == ultimos2Dig) ? (" Es automórfico") : (" No es automórfico");
 			}
 
 			if (sResultPot.length() >= 19) {
-				System.out.println("\nLo siento, no puede mostrar más " + i + " de exponente. Digitos esta fuera de limite");
+//				System.out.println("\nLo siento, no puede mostrar más " + i + " de exponente. Digitos esta fuera de limite");
+				msg += "\n\nLo siento,\nno puede mostrar más " + i + " de exponente. Digitos esta fuera de limite";
 				break;
 			}
-			
+
 		}//Fin CalcularPotencia - verificiarAutomorfico
+		JOptionPane.showMessageDialog(null, msg);
 		
 	}//Fin Main
-	
+
 }//Fin Class
