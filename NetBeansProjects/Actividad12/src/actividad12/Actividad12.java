@@ -24,19 +24,19 @@ public class Actividad12
 		int resultPowMax;
 		String numInputText;
 		String resultPotText;
-		boolean automorfico = true;
+		boolean automorfico;
 
 		numInput = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero:"));
-		System.out.println("User input: " + numInput);
+		//System.out.println("User input: " + numInput);
 
 		resultPowMax = (int) Math.pow(numInput, numInput);
-		System.out.println("resultado potencia maxima: " + resultPowMax);
+		//System.out.println("resultado potencia maxima: " + resultPowMax);
 		numInputText = String.valueOf(numInput);
-		System.out.println("User Input int Cambia tipo de datos a String: " + numInputText);
+		//System.out.println("User Input int Cambia tipo de datos a String: " + numInputText);
 		resultPotText = String.valueOf(resultPowMax);
-		System.out.println("Resultado potencia int Cambia tipo de datos a String: " + resultPotText);
+		//System.out.println("Resultado potencia int Cambia tipo de datos a String: " + resultPotText);
 		digitos = numInputText.length();
-		System.out.println("Cantidad digitos \"length\" de Input User: " + digitos);
+		//System.out.println("Cantidad digitos \"length\" de Input User: " + digitos);
 
 //		//CalcularPotencia()
 		long resultPot;
@@ -44,7 +44,7 @@ public class Actividad12
 		String sResultPot, ultimos2DigitosResPot = "";
 		boolean igualDigito;
 
-		System.out.println("\nBase | Exponente | Resultado ");
+		System.out.println("Base | Exponente | Resultado ");
 		for (int i = 1; i <= numInput; i++) {
 			resultPot = (long) Math.pow(numInput, i);
 			sResultPot = String.valueOf(resultPot);
@@ -58,8 +58,7 @@ public class Actividad12
 				ultDig1_resultPot = Character.getNumericValue(sResultPot.charAt(cantDigResultPot - 1));
 
 				//Comparativa inputUserNum == Ultima digito de resultado potencia
-				igualDigito = numInput == ultDig1_resultPot;
-				System.out.println("   igualDigito: " + igualDigito);
+				System.out.println((igualDigito = numInput == ultDig1_resultPot) ? ("Es automórfico") : ("No es automórfico"));
 			}
 			else //digitos == 2
 			{
