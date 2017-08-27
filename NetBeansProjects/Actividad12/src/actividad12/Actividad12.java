@@ -25,16 +25,10 @@ public class Actividad12
 		long resultPot;
 
 		numInput = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero:"));
-		//System.out.println("User input: " + numInput);
-
 		resultPowMax = (int) Math.pow(numInput, numInput);
-		//System.out.println("resultado potencia maxima: " + resultPowMax);
 		numInputText = String.valueOf(numInput);
-		//System.out.println("User Input int Cambia tipo de datos a String: " + numInputText);
 		resultPotText = String.valueOf(resultPowMax);
-		//System.out.println("Resultado potencia int Cambia tipo de datos a String: " + resultPotText);
 		digitos = numInputText.length();
-		//System.out.println("Cantidad digitos \"length\" de Input User: " + digitos);
 		
 		//CalcularPotencia()
 		System.out.println("Base | Exponente | Resultado ");
@@ -60,22 +54,17 @@ public class Actividad12
 
 				//Extraer ultima digito de Resultado Potencia "String" a variable int ultDig_resultPot
 				ultDig1_resultPot = Character.getNumericValue(sResultPot.charAt(cantDigResultPot - 1));
-				//System.out.println("\nultima digito de Resultado: "+ultDig1_resultPot);
 
 				//Extraer pentiultima digito de Resultado Potencia "String" a variable int ultDig_resultPot
 				ultDig2_resultPot = Character.getNumericValue(sResultPot.charAt(cantDigResultPot - 2));
-				//System.out.println("pentiultima digito de Resultado: " + ultDig2_resultPot);
 
 				// Int ultDig1_resultPot y ultDig2_resultPot a String variable ultimos2DigitosResPot
 				ultimos2DigitosResPot = String.valueOf(ultDig2_resultPot + "" + ultDig1_resultPot);
-				//System.out.println("ultDig1_resultPot y ultDig2_resultPot: "+ ultimos2DigitosResPot);
 
 				//String a int ultimos2Dig
 				ultimos2Dig = Integer.parseInt(ultimos2DigitosResPot);
 
 				//Comparativa inputUserNum == Ultima digito de resultado potencia
-				//igualDigito = numInput == ultimos2Dig;
-				//System.out.println("   igualDigito: " + igualDigito);
 				System.out.println((igualDigito = numInput == ultimos2Dig) ? ("Es automórfico") : ("No es automórfico"));
 			}
 
