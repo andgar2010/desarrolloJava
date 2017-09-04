@@ -1,0 +1,7 @@
+G:\ADSI\PORTAFOLIO APRENDIZ GARCIA RAMÍREZ ANDRÉS FELIPE\07. Evidencias de Aprendizaje\CEET\FASE 3\Componente JAVA\VSProjects\Actividad10\bin\Debug\Actividad10.exe.config
+G:\ADSI\PORTAFOLIO APRENDIZ GARCIA RAMÍREZ ANDRÉS FELIPE\07. Evidencias de Aprendizaje\CEET\FASE 3\Componente JAVA\VSProjects\Actividad10\bin\Debug\Actividad10.exe
+G:\ADSI\PORTAFOLIO APRENDIZ GARCIA RAMÍREZ ANDRÉS FELIPE\07. Evidencias de Aprendizaje\CEET\FASE 3\Componente JAVA\VSProjects\Actividad10\bin\Debug\Actividad10.pdb
+G:\ADSI\PORTAFOLIO APRENDIZ GARCIA RAMÍREZ ANDRÉS FELIPE\07. Evidencias de Aprendizaje\CEET\FASE 3\Componente JAVA\VSProjects\Actividad10\obj\Debug\Actividad10.csprojResolveAssemblyReference.cache
+G:\ADSI\PORTAFOLIO APRENDIZ GARCIA RAMÍREZ ANDRÉS FELIPE\07. Evidencias de Aprendizaje\CEET\FASE 3\Componente JAVA\VSProjects\Actividad10\obj\Debug\Actividad10.csproj.CoreCompileInputs.cache
+G:\ADSI\PORTAFOLIO APRENDIZ GARCIA RAMÍREZ ANDRÉS FELIPE\07. Evidencias de Aprendizaje\CEET\FASE 3\Componente JAVA\VSProjects\Actividad10\obj\Debug\Actividad10.exe
+G:\ADSI\PORTAFOLIO APRENDIZ GARCIA RAMÍREZ ANDRÉS FELIPE\07. Evidencias de Aprendizaje\CEET\FASE 3\Componente JAVA\VSProjects\Actividad10\obj\Debug\Actividad10.pdb
