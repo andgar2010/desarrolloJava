@@ -152,9 +152,199 @@ public class Actividad15
 					}
 					while (anio < 1200 || anio > 2200);
 
-					totalDMA = dia + mes + anio;
-					// 1967
+					totalDMA = dia + mes + anio;// 1967
 
+					int resultMod, resultSum =0, digTotalDMA, digResultSum ;
+					String sTotalDMA = "", sResultSum = "";
+					do
+					{				
+						resultMod = totalDMA % 10;
+						System.out.println("\ntotalDMA  %10  = ResultMod sum1");
+						System.out.println(totalDMA+"\t%10\t=" + resultMod);
+						
+						resultSum = resultSum + resultMod;						
+						System.out.println("\nAntSum + resultModSum1 = NueSum:\n" + (resultSum - resultMod) + " + " + resultMod + " = " + resultSum);
+						
+						System.out.println("\ntotalDMA / 10\n" + totalDMA + "/ 10 =" + (totalDMA/10));
+						totalDMA = totalDMA / 10;
+						
+						sTotalDMA = String.valueOf(totalDMA);
+						digTotalDMA = sTotalDMA.length();
+						
+						sResultSum = String.valueOf(resultSum);
+						digResultSum = sResultSum.length();
+						
+						if (digResultSum >= 1) {
+							totalDMA = resultSum;
+						}
+						
+						
+					}while (digResultSum == 1);				
+					
+					System.out.println("totalDMA menos 10 digitos: " + totalDMA);
+					
+					
+					
+					
+//					
+//					
+//					String sTotalDMA = String.valueOf(totalDMA); //"1967"
+//					int digtsTotalDMA = sTotalDMA.length(); //4 digits
+//					int digtCD, //a digit 1 -> 9 -> 6 -> 7
+//					 sumDMA = 0;
+//
+//					do {
+//						for (int i = 0; i < digtsTotalDMA; i++) {
+//							digtCD = Character.getNumericValue(sTotalDMA.charAt(i));
+//							System.out.println(i + " digtCD: " + digtCD);
+//							sumDMA += digtCD;
+//							System.out.println(i + " sumDMA: " + sumDMA);
+//						}
+//						if (sumDMA < 10 && sumDMA > 0) {
+//							System.out.println("15. sTotalDMA: " + sTotalDMA);
+//						}
+//						else
+//						{
+//							sTotalDMA = String.valueOf(sumDMA);
+//							digtsTotalDMA = sTotalDMA.length();
+//						}
+//					}
+//					while (sumDMA < 10 && sumDMA > 0);
+
+					
+					/*
+					
+					String sSumDMA = String.valueOf(sumDMA);
+					int sSumLeg = sSumDMA.length(),
+					 sumDMA1 = 0;
+					sumDMA = 0;
+
+					digtCD = Character.getNumericValue(sSumDMA.charAt(0));
+					System.out.println("3. digtCD: " + digtCD);
+					sumDMA += digtCD;
+					sSumDMA = String.valueOf(sumDMA);
+					System.out.println("3. sumDMA: " + sumDMA);
+
+					digtCD = Character.getNumericValue(sSumDMA.charAt(1));
+					System.out.println("4. digtCD: " + digtCD);
+					sumDMA += digtCD;
+					sSumDMA = String.valueOf(sumDMA);
+					System.out.println("4. sumDMA: " + sumDMA);
+*/
+
+//					
+//					int sum = 0, resultModTotalDMA = 0;
+//					
+//					System.out.println("dia\t+\tmes\t+\tanio\t=totalDMA");
+//					System.out.println(dia + "\t+\t" + mes + "\t+\t" + anio + "\t=" + totalDMA);
+//					
+//					do {
+//						resultModTotalDMA = totalDMA % 10;
+//						System.out.println("\ntotalDMA  %10  = ResultMod totalDMA");
+//						System.out.println(totalDMA+"\t%10\t=" + resultModTotalDMA);
+//						
+//						sum = sum + resultModTotalDMA;						
+//						System.out.println("\nAntSum + ResultModDMA = NueSum:\n" + (sum - resultModTotalDMA) + " + " + resultModTotalDMA + " = " + sum);
+//						
+//						totalDMA = totalDMA / 10;
+//						System.out.println("\ntotalDMA:\n"+totalDMA);
+//					}
+//					while (totalDMA > 0);					
+//
+//					System.out.println("sum :"+sum);
+//					
+//					int sum1 = sum;
+//					int resultModSum1 = 0, resSum = 0;
+//					
+//					do {
+//						resultModSum1 = sum1 % 10;
+//						System.out.println("\nsum1  %10  = ResultMod sum1");
+//						System.out.println(sum1+"\t%10\t=" + resultModSum1);
+//						
+//						resSum = resSum + resultModSum1;						
+//						System.out.println("\nAntSum + resultModSum1 = NueSum:\n" + (resSum - resultModSum1) + " + " + resultModSum1 + " = " + resSum);
+//						
+//						System.out.println("\nsum1 / 10\n" + sum1 + "/ 10 =" + (sum1/10));
+//						sum1 = sum1 / 10;
+//					}
+//					while (sum1 > 9);
+//					
+//					System.out.println("sum1 :"+sum1);
+//					do {
+//
+//					String sum1 = sum + "";
+//
+//					int temp1 = Integer.parseInt("" + sum1.charAt(0));
+//					System.out.println("temp1: " + temp1);
+//					int temp2 = Integer.parseInt("" + sum1.charAt(1));
+//					System.out.println("temp2: " + temp2);
+//					int totalNum1 = temp1 + temp2;
+//					System.out.println("totalNum: " + totalNum1);
+//					
+//					
+//						
+//					}
+//					while (totalNum1 < 9);
+//					String stotalNum = "" + totalNum1;
+//
+//					temp1 = Integer.parseInt("" + stotalNum.charAt(0));
+//					System.out.println("temp1: " + temp1);
+//					temp2 = Integer.parseInt("" + stotalNum.charAt(1));
+//					System.out.println("temp2: " + temp2);
+//					int totalNum2 = temp1 + temp2;
+//					System.out.println("totalNum: " + totalNum2);
+//					int num = 321;
+//					int sum = 0;
+//					while (num > 0) {
+//						sum = sum + num % 10;
+//						num = num / 10;
+//					}
+//					System.out.println(sum);
+//					
+//					if (totalDMA % 1000 > 1000) {
+//						
+//					}
+//					
+//					
+//					int resulTotalDMA = (totalDMA % 1000 );
+//					// 967
+//					
+//					System.out.println("totalDMA: " + totalDMA + "\nresult mod 1000:" + resulTotalDMA);
+//					
+//					
+//					
+//					
+//
+//					String sTotalDMA = totalDMA + "";
+//
+//					int totalNum1 = 0,
+//					 temp,
+//					 temp1,
+//					 totalNum2 = 0,
+//					 digito = 0;
+//
+//					do {
+//						for (int i = 0; i <= (sTotalDMA.length()-1); i++) {
+//							temp = Integer.parseInt("" + sTotalDMA.charAt(i));
+//							System.out.println("temp: " + temp);
+//							totalNum1 += temp;
+//							System.out.println("totalNum1: " +  totalNum1);							
+//						}
+//
+//						String sTotalNum1 = totalNum1 + "";
+//						System.out.println("sTotalNum1: " + sTotalNum1);
+//					}
+//					while (sTotalDMA.length() == digito);
+//					
+//					for (int i = 0; i < 1; i++) {
+//						temp = Integer.parseInt("" + sTotalDMA.charAt(i));
+//						System.out.println("temp: " + temp);
+//						totalNum2 += temp;
+//						System.out.println("totalNum2: " +  totalNum2);							
+//					}
+//					
+//					
+//					JOptionPane.showMessageDialog(null, "Resultado: " + totalNum2);
 					break;//Fin Case 3 Ejercicio
 
 			}//Fin Switch OpcionMenu
@@ -269,4 +459,4 @@ public class Actividad15
 
 	}//Fin verificarFechaCorrecta()
 
-}
+}//Fin Class
