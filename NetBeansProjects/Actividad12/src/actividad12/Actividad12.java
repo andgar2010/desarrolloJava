@@ -10,7 +10,7 @@ import javax.swing.UIManager;
 
 /**
  *
- * @author andga
+ * @author Andres Felipe Garcia Ramirez
  */
 public class Actividad12
 {
